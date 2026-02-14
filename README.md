@@ -4,7 +4,9 @@ A responsive real-time multi-user whiteboard built with Vite + React and Firebas
 
 ## Demo
 
-<video controls src="./demo.mov" style="max-width:100%;height:auto">Your browser does not support the video tag — download demo.mov to view.</video>
+Live demo: https://coop-whiteboard.netlify.app
+
+<video controls src="./demo.mp4" style="max-width:100%;height:auto"></video>
 
 ## Features
 
