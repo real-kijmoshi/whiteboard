@@ -1,12 +1,10 @@
 # Whiteboard — Real-time Collaborative Whiteboard
 
-A responsive real-time multi-user whiteboard built with Vite + React and Firebase Realtime Database. Draw on the canvas, choose brush color and size, use the eraser, and watch strokes sync live to everyone in the same room.
+A responsive real-time multi-user whiteboard built with Vite + React and Firebase Realtime Database. Draw on the canvas, choose brush color and size, use the eraser, and watch strokes sync live to everyone in the same room. Made for the GitHub Copilot CLI Challenge to explore rapid prototyping.
 
 ## Demo
 
 <video controls src="./demo.mov" style="max-width:100%;height:auto">Your browser does not support the video tag — download demo.mov to view.</video>
-
-If the video doesn't play on GitHub, download the demo.mov file from the repo and play locally.
 
 ## Features
 
@@ -62,8 +60,8 @@ If the video doesn't play on GitHub, download the demo.mov file from the repo an
 
 ## Troubleshooting
 
-- If the demo video doesn't appear on GitHub, download `demo.mov` and open it locally.
-- If strokes are not syncing, confirm your `.env` values and that Realtime Database is enabled and reachable.
+- If strokes are not syncing, confirm your `.env` values and that Realtime Database is enabled and reachable and rules allow reads/writes.
+- Check the browser console for errors related to Firebase initialization or database access.
 
 ## Deploy
 
