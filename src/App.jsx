@@ -52,6 +52,7 @@ function App() {
   const lastPosRef = useRef(null)
   const clientId = useRef(null)
   const [copied, setCopied] = useState(false)
+  const [notice, setNotice] = useState('')
 
   useEffect(() => {
     const key = 'wb:clientId'
@@ -171,7 +172,11 @@ function App() {
   }
 
   function handlePointerDown(e) {
-    if (!joined) return
+    if (!joined) {
+      setNotice('Please join the room first to draw.')
+      setTimeout(() => setNotice(''), 2400)
+      return
+    }
     drawingRef.current = true
     try { e.target.setPointerCapture && e.target.setPointerCapture(e.pointerId) } catch {}
     const pos = screenToLocal(e)
@@ -330,6 +335,9 @@ function App() {
 
   return (
     <div className="app">
+      {notice && (
+        <div style={{position: 'absolute', top: 20, left: '50%', transform: 'translateX(-50%)', background: 'rgba(0,0,0,0.85)', color: '#fff', padding: '8px 12px', borderRadius: 8, zIndex: 1000}}>{notice}</div>
+      )}
       <div className="toolbar">
         <div style={{display:'flex', alignItems:'center', gap:8}}>
           <label className="room-label">Room</label>
